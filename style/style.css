@@ -1,0 +1,31 @@
+html * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    color: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(56,92,163,1) 40%, rgba(66,43,119,1) 60%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(56,92,163,1) 40%, rgba(66,43,119,1) 60%, rgba(0,0,0,1) 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 50px;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+header a {
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
