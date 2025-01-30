@@ -1,7 +1,9 @@
-html * {
-    padding: 0px;
-    margin: 0px;
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -9,24 +11,126 @@ body {
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(56,92,163,1) 40%, rgba(66,43,119,1) 60%, rgba(0,0,0,1) 100%);
 }
 
+/* Header */
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 50px;
-    color: white;
-    border-bottom: 2px solid black;
+    background: #0f172a;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-header a {
-    margin: 5px;
-    color: white;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #818cf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
     text-decoration: none;
+    color: #f8fafc;
+    transition: color 0.3s;
 }
 
+.nav-links a:hover {
+    color: #818cf8;
+}
+
+/* Corps principal */
 main {
+    margin-top: 80px;
+    padding: 4rem 5%;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(45deg, #1e293b, #0f172a);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d3436;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #2d3436;
+    color: white;
+    padding: 3rem 5%;
+    margin-top: auto;
+}
+
+.footer-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
 }
